@@ -26,7 +26,11 @@ const {
     <ClientRouter />
   </head>
   <body>
+    <a
+      class="neo-button fixed top-2 left-2 z-100 -translate-y-24 focus:translate-y-0"
+      href="#main-content">Skip to content</a
+    >
     <Nav />
-    <slot />
+    <main id="main-content"><slot /></main>
   </body>
 </html>

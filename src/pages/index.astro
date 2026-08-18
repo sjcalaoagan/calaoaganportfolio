@@ -34,95 +34,148 @@ const exp_webdev = [
 <Layout title="Calaoagan Portfolio">
   <!-- HERO -->
   <section
-    class="flex h-full min-h-screen w-full flex-col items-center justify-center bg-[url(/hero-img.png)] bg-cover bg-position-[0%_30%] lg:flex-row"
+    class="neo-grid min-h-screen px-5 pt-28 pb-16 sm:px-8 lg:flex lg:items-center lg:pt-36"
   >
-    <div class="w-full bg-white py-5 text-center shadow-2xl">
-      <h1 class="text-5xl font-extrabold text-pink-800 lg:text-9xl">
-        Sean Jefferson M. Calaoagan
-      </h1>
-      <p class="mt-5 text-lg font-bold text-pink-400 lg:text-4xl">
-        Aspiring AI Developer / Cloud Engineer
-      </p>
+    <div
+      class="mx-auto grid w-full max-w-7xl items-center gap-10 lg:grid-cols-[1.35fr_0.65fr]"
+    >
+      <div class="relative z-10">
+        <p
+          class="mb-5 inline-block border-3 border-[#21191c] bg-[#e8bcc6] px-3 py-2 text-sm font-black tracking-[0.12em] uppercase shadow-[4px_4px_0_#21191c]"
+        >
+          Portfolio / 2026
+        </p>
+        <h1
+          class="max-w-5xl text-[clamp(3.7rem,9vw,8.5rem)] leading-[0.78] font-black tracking-[-0.075em] uppercase"
+        >
+          Sean<br />Jefferson<br /><span class="text-[#8f4f60]">Calaoagan</span>
+        </h1>
+        <div class="7 mt-8 flex flex-wrap items-center gap-4">
+          <p
+            class="max-w-xl border-l-6 border-[#c98c9b] pl-4 text-lg leading-tight font-bold sm:text-2xl"
+          >
+            Aspiring AI developer and Cloud Engineer
+          </p>
+          <a class="neo-button" href="/works">Explore my work →</a>
+        </div>
+      </div>
+      <div class="relative mx-auto w-full max-w-lg lg:mx-0">
+        <div
+          class="absolute -top-4 right-0 left-4 h-full border-3 border-[#21191c] bg-[#c98c9b]"
+        >
+        </div>
+        <img
+          src="/hero-img.png"
+          alt="Sean Calaoagan sitting by a window"
+          class="relative aspect-square w-full border-3 border-[#21191c] object-cover"
+        />
+        <span
+          class="absolute -bottom-5 -left-3 -rotate-3 border-3 border-[#21191c] bg-[#21191c] px-4 py-2 text-sm font-black text-[#f8f0eb] uppercase sm:text-base"
+        >
+          Websites, Games, & Others
+        </span>
+      </div>
     </div>
   </section>
 
   <!-- CAREER SUMMARY -->
   <section
-    class="flex w-full flex-col bg-pink-100 px-12 py-12 lg:px-64"
+    class="border-y-3 border-[#21191c] bg-[#c98c9b] px-5 py-16 sm:px-8 lg:py-24"
     id="about"
   >
-    <div class="mb-4 flex flex-row">
-      <article
-        class="flex flex-2 items-center justify-center bg-pink-900 p-12 shadow-lg"
-      >
-        <p class="text-justify font-mono font-bold text-pink-50 lg:text-2xl">
+    <div
+      class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-center"
+    >
+      <div>
+        <p class="font-black tracking-[0.14em] uppercase">01 / About</p>
+        <h2
+          class="mt-3 text-5xl leading-[0.9] font-black tracking-[-0.055em] uppercase sm:text-7xl"
+        >
+          Learning by<br />building.
+        </h2>
+      </div>
+      <article class="neo-panel p-6 sm:p-10">
+        <p class="text-lg leading-relaxed font-bold sm:text-2xl">
           I build small, static websites using HTML, CSS, Tailwind, and Astro.
           Currently building a Linux desktop application using PyQt and Python.
           Published five games in itch.io utilizing Ren'Py and Godot. Aiming to
           delve into AI and Cloud Computing.
         </p>
       </article>
-      <div
-        class="hidden bg-pink-300 text-justify font-mono shadow-lg lg:flex-1 xl:flex"
-      >
-        <img src="/about-img.jpg" class="h-full w-full object-cover" />
-      </div>
     </div>
   </section>
 
   <!-- EXPERIENCES -->
-  <section
-    class="grid w-full grid-cols-1 gap-4 bg-pink-400 p-4 lg:p-8 xl:px-30 xl:py-12"
-  >
-    <h1 class="text-3xl font-extrabold text-pink-950 lg:text-5xl">
-      Experiences
-    </h1>
-    <Card
-      title="Game Developer"
-      list={exp_gamedev}
-      image="gamedev-img.png"
-      date="October 2022 - May 2025"
-      isBulleted={true}
-    />
-    <Card
-      title="Web Developer"
-      list={exp_webdev}
-      image="webdev-img.png"
-      date="January 2024 - Present"
-      isBulleted={true}
-    />
+  <section class="neo-grid px-5 py-16 sm:px-8 lg:py-24">
+    <div class="mx-auto max-w-7xl">
+      <div class="mb-10 border-b-3 border-[#21191c] pb-5">
+        <p class="font-black tracking-[0.14em] text-[#8f4f60] uppercase">
+          02 / Practice
+        </p>
+        <h2
+          class="mt-2 text-5xl leading-none font-black tracking-[-0.055em] uppercase sm:text-7xl"
+        >
+          Experience
+        </h2>
+      </div>
+      <div class="grid gap-8 lg:grid-cols-2">
+        <Card
+          title="Game Developer"
+          list={exp_gamedev}
+          image="gamedev-img.png"
+          date="October 2022 - May 2025"
+          isBulleted={true}
+        />
+        <Card
+          title="Web Developer"
+          list={exp_webdev}
+          image="webdev-img.png"
+          date="January 2024 - Present"
+          isBulleted={true}
+        />
+      </div>
+    </div>
   </section>
 
   <!-- EDUCATION -->
-  <section class="w-full bg-pink-900 p-4 lg:p-8 xl:px-30 xl:py-12">
-    <h1 class="mb-4 text-3xl font-extrabold text-pink-100 lg:text-5xl">
-      Education
-    </h1>
-    <div class="grid grid-cols-1 gap-4 xl:grid-cols-3">
-      <Card
-        title="Manila Cathedral School"
-        list={achievements_g10}
-        image="mcs-img.jpg"
-        date="2013-2023"
-        isBulleted={true}
-      />
-      <Card
-        title="CIIT Senior High School"
-        list={achievements_g11_g12}
-        image="cshs-img.jpg"
-        date="2023-2025"
-        isBulleted={true}
-      />
-      <Card
-        title="CIIT College of Innovation and Integrated Technology"
-        list={[
-          "BSCS - Specialization in AI and Cloud Computing",
-          "Interweave Scholar",
-        ]}
-        image="ccollege.png"
-        date="2025-Present"
-        isBulleted={true}
-      />
+  <section
+    class="border-t-3 border-[#21191c] bg-[#e8bcc6] px-5 py-16 sm:px-8 lg:py-24"
+  >
+    <div class="mx-auto max-w-7xl">
+      <div class="mb-10 border-b-3 border-[#21191c] pb-5">
+        <p class="font-black tracking-[0.14em] uppercase">03 / Foundation</p>
+        <h2
+          class="mt-2 text-5xl leading-none font-black tracking-[-0.055em] uppercase sm:text-7xl"
+        >
+          Education
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 gap-8 xl:grid-cols-3">
+        <Card
+          title="Manila Cathedral School"
+          list={achievements_g10}
+          image="mcs-img.jpg"
+          date="2013-2023"
+          isBulleted={true}
+        />
+        <Card
+          title="CIIT Senior High School"
+          list={achievements_g11_g12}
+          image="cshs-img.jpg"
+          date="2023-2025"
+          isBulleted={true}
+        />
+        <Card
+          title="CIIT College of Innovation and Integrated Technology"
+          list={[
+            "BSCS - Specialization in AI and Cloud Computing",
+            "Interweave Scholar",
+          ]}
+          image="ccollege.png"
+          date="2025-Present"
+          isBulleted={true}
+        />
+      </div>
     </div>
   </section>
 </Layout>

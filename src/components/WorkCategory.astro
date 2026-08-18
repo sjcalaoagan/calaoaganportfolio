@@ -11,9 +11,17 @@ const { link = "/", title = "", image = "/hero-img.png" } = Astro.props;
 ---
 
 <a
-  class="block w-full bg-cover p-5 text-center text-3xl font-extrabold text-pink-100 transition-transform duration-100 hover:scale-110 lg:p-10 lg:text-5xl"
+  class="group relative flex min-h-36 w-full items-end overflow-hidden border-3 border-[#21191c] bg-cover bg-center p-4 shadow-[7px_7px_0_#21191c] transition-[translate,box-shadow] duration-150 hover:translate-x-1 hover:translate-y-1 hover:shadow-[3px_3px_0_#21191c] sm:min-h-44 lg:min-h-52 lg:p-6"
   style={`background-image: url(/${image});`}
   href={link}
 >
-  <h1>{title}</h1>
+  <span
+    class="absolute inset-0 bg-[#8f4f60]/55 transition-colors group-hover:bg-[#8f4f60]/35"
+  ></span>
+  <h2
+    class="relative max-w-[90%] border-3 border-[#21191c] bg-[#f8f0eb] px-3 py-2 text-left text-2xl leading-none font-black tracking-[-0.04em] text-[#21191c] uppercase sm:text-4xl lg:text-5xl"
+  >
+    {title}
+    <span aria-hidden="true">↗</span>
+  </h2>
 </a>

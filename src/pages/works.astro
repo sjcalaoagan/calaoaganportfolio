@@ -5,24 +5,46 @@ import "../styles/global.css";
 ---
 
 <Layout title="XianShizukana's Works">
-  <section
-    class="flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-pink-400"
-  >
-    <WorkCategory
-      title="Senior High School"
-      link="/works_shs"
-      image="work-shiro.png"
-    />
-    <WorkCategory
-      title="College"
-      link="/works_college"
-      image="work-chime.jpeg"
-    />
-    <WorkCategory
-      title="Personal"
-      link="/works_personal"
-      image="work-btw.png"
-    />
-    <WorkCategory title="Other" link="/works_other" image="work-rocket.jpg" />
+  <section class="neo-grid min-h-screen px-5 pt-32 pb-20 sm:px-8 lg:pt-40">
+    <div class="mx-auto max-w-7xl">
+      <div class="mb-12 max-w-4xl">
+        <p class="mb-3 font-black tracking-[0.14em] text-[#8f4f60] uppercase">
+          Project index
+        </p>
+        <h1
+          class="text-6xl leading-[0.82] font-black tracking-[-0.065em] uppercase sm:text-8xl lg:text-9xl"
+        >
+          Selected<br />works.
+        </h1>
+        <!-- <p
+          class="mt-7 max-w-2xl border-l-6 border-[#c98c9b] pl-4 text-lg font-bold sm:text-xl"
+        >
+          Games, websites, school projects, and experiments—organized by where
+          they started.
+        </p> -->
+      </div>
+      <div class="grid gap-8 lg:grid-cols-2">
+        <WorkCategory
+          title="Senior High School"
+          link="/works_shs"
+          image="work-shiro.png"
+        />
+        <WorkCategory
+          title="College"
+          link="/works_college"
+          image="work-chime.jpeg"
+        />
+        <WorkCategory
+          title="Personal"
+          link="/works_personal"
+          image="work-btw.png"
+        />
+        <WorkCategory
+          title="Other"
+          link="/works_other"
+          image="work-rocket.jpg"
+        />
+      </div>
+    </div>
   </section>
 </Layout>

@@ -1,4 +1,79 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+:root {
+  --paper: #f8f0eb;
+  --paper-deep: #eeded8;
+  --pink: #c98c9b;
+  --pink-light: #e8bcc6;
+  --pink-dark: #8f4f60;
+  --ink: #21191c;
+  --shadow: 7px 7px 0 var(--ink);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--pink-light);
+}
+
+a,
+button {
+  outline-offset: 4px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--pink-dark);
+}
+
+.neo-grid {
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(to right, rgb(33 25 28 / 8%) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(33 25 28 / 8%) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.neo-panel {
+  border: 3px solid var(--ink);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.neo-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--ink);
+  background: var(--pink-light);
+  padding: 0.7rem 1rem;
+  color: var(--ink);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  box-shadow: 4px 4px 0 var(--ink);
+  transition:
+    translate 120ms ease,
+    box-shadow 120ms ease,
+    background 120ms ease;
+}
+
+.neo-button:hover {
+  background: var(--pink);
+  translate: 2px 2px;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.neo-button:active {
+  translate: 4px 4px;
+  box-shadow: none;
+}

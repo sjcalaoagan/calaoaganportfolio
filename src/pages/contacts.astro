@@ -6,21 +6,50 @@ import Card from "../components/Card.astro";
 
 <Layout title="Contacts">
   <section
-    class="flex h-screen w-screen items-center justify-center overflow-hidden bg-pink-800 p-5"
+    class="neo-grid min-h-screen px-5 pt-32 pb-20 sm:px-8 lg:flex lg:items-center lg:pt-28"
   >
-    <section class="grid w-full grid-cols-1 gap-5 lg:grid-cols-2">
-      <Card title="Email" list={["seancalaoagan@gmail.com"]} />
-      <Card title="Phone" list={["09171867434"]} />
-      <Card
-        title="Github"
-        buttonLink="https://github.com/sjcalaoagan"
-        buttonTitle="View Github Profile"
-      />
-      <Card
-        title="Facebook"
-        buttonLink="https://www.facebook.com/seancalaoagan/"
-        buttonTitle="View Facebook Profile"
-      />
-    </section>
+    <div
+      class="mx-auto grid w-full max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center"
+    >
+      <div>
+        <p class="mb-3 font-black tracking-[0.14em] text-[#8f4f60] uppercase">
+          Say hello
+        </p>
+        <h1
+          class="text-6xl leading-[0.82] font-black tracking-[-0.065em] uppercase sm:text-8xl"
+        >
+          My<br />Contacts.
+        </h1>
+        <p
+          class="mt-7 max-w-lg border-l-6 border-[#c98c9b] pl-4 text-lg font-bold sm:text-xl"
+        >
+          Feel free to reach out through these contacts.
+        </p>
+      </div>
+      <div class="grid gap-7 sm:grid-cols-2">
+        <Card
+          title="Email"
+          list={["seancalaoagan@gmail.com"]}
+          buttonLink="mailto:seancalaoagan@gmail.com"
+          buttonTitle="Send email"
+        />
+        <Card
+          title="Phone"
+          list={["09171867434"]}
+          buttonLink="tel:+639171867434"
+          buttonTitle="Call me"
+        />
+        <Card
+          title="Github"
+          buttonLink="https://github.com/sjcalaoagan"
+          buttonTitle="View profile"
+        />
+        <Card
+          title="Facebook"
+          buttonLink="https://www.facebook.com/seancalaoagan/"
+          buttonTitle="View profile"
+        />
+      </div>
+    </div>
   </section></Layout
 >

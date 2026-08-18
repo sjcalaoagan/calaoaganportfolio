@@ -1,20 +1,56 @@
 ---
 import "../styles/global.css";
+
+const pathname = Astro.url.pathname;
+const isActive = (href: string) =>
+  href === "/" ? pathname === href : pathname.startsWith(href);
 ---
 
 <header
-  class="fixed z-999 w-full bg-pink-200/60 py-5 backdrop-blur-xl md:px-20 lg:px-40"
+  class="fixed top-0 z-50 w-full border-b-3 border-[#21191c] bg-[#f8f0eb]"
 >
-  <nav class="flex justify-center font-bold md:justify-between">
-    <a href="/"
-      ><h1 class="hidden text-2xl text-pink-600 md:flex">Calaoagan</h1></a
+  <nav
+    class="mx-auto flex max-w-7xl items-stretch justify-between px-4 sm:px-6"
+  >
+    <a
+      href="/"
+      class="flex items-center border-x-3 border-[#21191c] bg-[#c98c9b] px-4 py-3 text-lg font-black tracking-[-0.04em] uppercase sm:text-xl"
     >
+      SJC<span class="hidden sm:inline"> / Portfolio</span>
+    </a>
     <ul
-      class="flex space-x-10 text-2xl text-pink-600 md:space-x-13 lg:space-x-16"
+      class="flex border-r-3 border-[#21191c] text-sm font-black uppercase sm:text-base"
     >
-      <li class="md:hidden"><a href="/">Home</a></li>
-      <li><a href="/works">Works</a></li>
-      <li><a href="/contacts">Contacts</a></li>
+      <li>
+        <a
+          href="/"
+          aria-current={isActive("/") ? "page" : undefined}
+          class:list={[
+            "flex h-full items-center border-l-3 border-[#21191c] px-3 py-3 transition-colors hover:bg-[#e8bcc6] sm:px-5",
+            isActive("/") && "bg-[#21191c] text-[#f8f0eb]",
+          ]}>Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="/works"
+          aria-current={isActive("/works") ? "page" : undefined}
+          class:list={[
+            "flex h-full items-center border-l-3 border-[#21191c] px-3 py-3 transition-colors hover:bg-[#e8bcc6] sm:px-5",
+            isActive("/works") && "bg-[#21191c] text-[#f8f0eb]",
+          ]}>Works</a
+        >
+      </li>
+      <li>
+        <a
+          href="/contacts"
+          aria-current={isActive("/contacts") ? "page" : undefined}
+          class:list={[
+            "flex h-full items-center border-l-3 border-[#21191c] px-3 py-3 transition-colors hover:bg-[#e8bcc6] sm:px-5",
+            isActive("/contacts") && "bg-[#21191c] text-[#f8f0eb]",
+          ]}>Contact</a
+        >
+      </li>
     </ul>
   </nav>
 </header>
